@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://103.173.215.7/democalling/';
+$config['base_url'] = 'https://comms-connecter-1f3eb27f4a77.herokuapp.com/';
 
 /*
 |--------------------------------------------------------------------------
