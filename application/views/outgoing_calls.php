@@ -1087,7 +1087,7 @@ foreach ($contact_data as $key) { ?>
                         <td id="number_out" colspan="3">
 
                           <input style="font-size: 1.3rem;" class="form-control " type="text" id="number" onkeyup="check_blacklist(this.value)" name="number" placeholder="Enter number with country code"><div class="remove-icon">
-                      <img src="http://103.173.215.7/democalling/img/backspace-thin-svgrepo-com.svg">
+                      <img src="https://comms-connecter-1f3eb27f4a77.herokuapp.com/img/backspace-thin-svgrepo-com.svg">
                     </div></td>
                     </tr>
                     <tr class="dialer_num_tr">
