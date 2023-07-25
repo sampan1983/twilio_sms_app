@@ -8,6 +8,7 @@ include_once 'JWT.php';
  * @author Jeff Lindsay <jeff.lindsay@twilio.com>
  * @license  http://creativecommons.org/licenses/MIT/ MIT
  */
+#[\AllowDynamicProperties]
 class Services_Twilio_Capability
 {
     public $accountSid;
