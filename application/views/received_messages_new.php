@@ -5,7 +5,7 @@
   text-align: left;
 }
 .adjust{
-	white-space: break-spaces;
+	white-space: break-spaces !important;
     width: 344px !important;
     min-width: 336px !important;
 }
