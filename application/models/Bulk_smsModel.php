@@ -120,17 +120,19 @@ class Bulk_smsModel extends CI_Model {
 	 $fname = $name_data[$counter]['first_name'];
 	 $lname = $name_data[$counter]['last_name'];
 
-   $message= str_replace('{{firstname}}',"hello",$message);
-   $message= str_replace('{{lastname}}',"hello",$message);
 
-	 	 	$nmbr=$clients_name[$i]['sender'];
+   	 	$nmbr=$clients_name[$i]['sender'];
 
 	 $check_tapp_sent_msg = "select * from tapp_sent_msg where user_id = '".$_SESSION['id']."' and sms_number = '$nmbr'";
 	 $check_tapp_sent_msg_result = $this->db->query($check_tapp_sent_msg);
 	 if ($check_tapp_sent_msg_result->num_rows()<1) {
 		 // echo $sending_type;
+  $message = str_replace("{{firstname}}","Peter",$message);
+  echo $message;
+  exit();
 
 		if($sending_type=='scheduled'){
+
 			$insert_msg_log = "INSERT INTO tapp_sent_msg(service_type, sms_number, message, twilio_num, images, bulk_name,date_time,scheduled_time,user_id) VALUES ('twilio','$nmbr','$message','$twilio_number','$img','$name',now(),'$scheduled_time','".$_SESSION['id']."')";
 		}
 		else{
