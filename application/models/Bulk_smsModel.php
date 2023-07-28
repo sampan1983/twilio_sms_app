@@ -118,7 +118,7 @@ class Bulk_smsModel extends CI_Model {
 
  	 $name_data = $result->result_array();
 	 $fname = $name_data[$counter]['first_name'];
-	 $lname = $name_data[$counter]['lastname'];
+	 $lname = $name_data[$counter]['last_name'];
 
    $message= str_replace('{{firstname}}',$fname,$message);
    $message= str_replace('{{lastname}}',$lname,$message);
