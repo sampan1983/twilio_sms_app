@@ -4,6 +4,11 @@
 {
   text-align: left;
 }
+.adjust{
+	white-space: break-spaces;
+    width: 344px !important;
+    min-width: 336px !important;
+}
 tbody#Received td.sorting_1 {
     text-align: center !important;
     padding-right: 17px;
@@ -298,7 +303,7 @@ table
 
                                 <td >'.$new_recieve[$i]['twilio_num'].'</td>
 
-                                <td>'.$new_recieve[$i]['body'].'</td>
+                                <td class="adjust">'.$new_recieve[$i]['body'].'</td>
 
                                 <td>'.$img.'</td>
 
