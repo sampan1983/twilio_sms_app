@@ -44,7 +44,7 @@ div#all_contacs {
     padding-top: 9px;
     padding-left: 9px;
     padding-bottom: 9px;
-    height: 65px;
+    height: 120px;
     overflow-y: auto;
     border: 1px;
     border: solid;
