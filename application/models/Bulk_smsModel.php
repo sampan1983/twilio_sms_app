@@ -191,10 +191,11 @@ else
 	 $name = $name_data[$counter]['first_name'];
 
    $myquery_v = $this->db->query("select * from tapp_tbl_clients where sender = '$clients_name[$i]'")->result_array();
+echo $myquery_v ;
+		exit();
+   // $message = str_replace("{{firstname}}",$myquery_v['first_name'],$message);
+   // $message = str_replace("{{lastname}}",$myquery_v['last_name'],$message);
 
-   $message = str_replace("{{firstname}}",$myquery_v['first_name'],$message);
-   $message = str_replace("{{lastname}}",$myquery_v['last_name'],$message);
-return $message;
 	 $check_tapp_sent_msg = "select * from tapp_sent_msg where user_id = '".$_SESSION['id']."' and sms_number = '$clients_name[$i]'";
 	 $check_tapp_sent_msg_result = $this->db->query($check_tapp_sent_msg);
 	 if ($check_tapp_sent_msg_result->num_rows()<1) {
