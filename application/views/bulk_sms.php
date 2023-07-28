@@ -2068,15 +2068,15 @@ function select_n(str) {
                   else
                   {
                     console.log(r);
-                  location.reload();
+                  // location.reload();
                    }
-                   location.reload();
+                   // location.reload();
                 },
 
                 error:function(xhr,status,error){
 
                   console.log(xhr.responseText);
-                   location.reload();
+                   // location.reload();
                 }
 
       });
