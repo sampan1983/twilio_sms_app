@@ -119,7 +119,9 @@ class Bulk_smsModel extends CI_Model {
  	 $name_data = $result->result_array();
 	 $fname = $name_data[$counter]['first_name'];
 	 $lname = $name_data[$counter]['lastname'];
-;
+
+   $message= str_replace('{{firstname}}',$fname,$message);
+   $message= str_replace('{{lastname}}',$lname,$message);
 
 	 	 	$nmbr=$clients_name[$i]['sender'];
 
@@ -232,10 +234,11 @@ else
  		for ($i=0; $i < $tapp_groups_result->num_rows() ; $i++) {
  		$tapp_groups_data = $tapp_groups_result->result_array();
  		$number  = $tapp_groups_data[$i]['number'];
+		$message= str_replace('{{firstname}}',$tapp_groups_data[$i]['first_name'],$message);
+		$message= str_replace('{{lastname}}',$tapp_groups_data[$i]['last_name'],$message);
  			if (strlen($number)<11) {
 			$number = '1'.$number;
 		}
-
 		 if($sending_type=='scheduled'){
 			$insert_msg_log = "INSERT INTO tapp_sent_msg(service_type,sms_number,message,twilio_num,images,bulk_name,date_time,scheduled_time,user_id) VALUES ('twilio','$number','$message','$twilio_number','$img','$group_name',now(),'$scheduled_time','".$_SESSION['id']."')";
 		}
