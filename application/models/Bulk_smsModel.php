@@ -193,7 +193,7 @@ echo $clients_name[$i];
 echo $name;
 		
    $myquery_v = $this->db->query("select * from tapp_tbl_clients where sender = '$clients_name[$i]'");
-echo $myquery_v ;
+print_r($myquery_v);
 		exit();
    // $message = str_replace("{{firstname}}",$myquery_v['first_name'],$message);
    // $message = str_replace("{{lastname}}",$myquery_v['last_name'],$message);
