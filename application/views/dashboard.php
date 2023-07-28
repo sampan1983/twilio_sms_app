@@ -219,7 +219,7 @@ div#curve_chart div {
 div#curve_chart {
     overflow: hidden;
   }
-  
+
   h4.card-title.title2 {
       margin-left: 12px;
   }
@@ -464,7 +464,7 @@ if ($total_message_report==0) {
 
             <div class="col-sm-6 col-lg-3 flexsss">
 
-<a href="<?php echo base_url(); ?>Contacts">
+<a href="<?php echo base_url(); ?>Pending_Messages">
 
               <div class="card postion-for-contant">
 
@@ -473,8 +473,8 @@ if ($total_message_report==0) {
                 <div class="card-body p-0 clearfix card-dis ">
                  <i class="icon-user-follow moblie-padding-dash  font-2xl float-left"></i>
                   <div class="contact-info">
-                   <div class="text-muted text-uppercase font-weight-bold font-xs text-center leads4">Sent SMS</div>
-                  <div class="h2 mb-0 pt-3 text-center"><?php echo '0'; ?><br><div class="text-center current">Client</div></div>
+                    <div class="text-muted text-uppercase font-weight-bold font-xs text-center leads4">Pending Message</div>
+                  <div class="h2 mb-0 pt-3 text-center"><?php echo($pending_numbers);?><br><div class="text-center current">Pending</div></div>
 
 </div>
 </div>
