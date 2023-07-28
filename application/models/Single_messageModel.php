@@ -14,6 +14,8 @@ use Twilio\Rest\Client;
 			else{
 				$number = substr($number,1);
 			}
+			echo $number;
+			exit();
 
 			// $tmp_img = $this->input->post('file');
 			$tmp_img = $_FILES;
