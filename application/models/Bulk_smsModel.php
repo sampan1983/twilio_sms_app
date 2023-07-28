@@ -127,9 +127,6 @@ class Bulk_smsModel extends CI_Model {
 	 $check_tapp_sent_msg_result = $this->db->query($check_tapp_sent_msg);
 	 if ($check_tapp_sent_msg_result->num_rows()<1) {
 		 // echo $sending_type;
-  $message = str_replace("{{firstname}}","Peter",$message);
-  echo $message;
-  exit();
 
 		if($sending_type=='scheduled'){
 
@@ -192,6 +189,9 @@ else
 	{
  	 $name_data = $result->result_array();
 	 $name = $name_data[$counter]['first_name'];
+   $message = str_replace("{{firstname}}",$name_data[$counter]['first_name'],$message);
+   $message = str_replace("{{lastname}}",$name_data[$counter]['last_name'],$message);
+
 	 $check_tapp_sent_msg = "select * from tapp_sent_msg where user_id = '".$_SESSION['id']."' and sms_number = '$clients_name[$i]'";
 	 $check_tapp_sent_msg_result = $this->db->query($check_tapp_sent_msg);
 	 if ($check_tapp_sent_msg_result->num_rows()<1) {
