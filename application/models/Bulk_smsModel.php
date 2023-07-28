@@ -189,6 +189,11 @@ else
 	{
  	 $name_data = $result->result_array();
 	 $name = $name_data[$counter]['first_name'];
+
+   $myquery_v = $this->db->query("select * from tapp_tbl_clients where sender = '$clients_name[$i]'")->result_array();
+
+   print_r($myquery_v);
+   exit();
    $message = str_replace("{{firstname}}",$name_data[$counter]['first_name'],$message);
    $message = str_replace("{{lastname}}",$name_data[$counter]['last_name'],$message);
 
