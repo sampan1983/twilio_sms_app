@@ -120,12 +120,9 @@ class Bulk_smsModel extends CI_Model {
 	 $fname = $name_data[$counter]['first_name'];
 	 $lname = $name_data[$counter]['last_name'];
 
-   $message= str_replace('{{firstname}}',$fname,$message);
-   $message= str_replace('{{lastname}}',$lname,$message);
-		echo $fname;
-echo $message;
+   $message= str_replace('{{firstname}}',"hello",$message);
+   $message= str_replace('{{lastname}}',"hello",$message);
 
-	exit();
 	 	 	$nmbr=$clients_name[$i]['sender'];
 
 	 $check_tapp_sent_msg = "select * from tapp_sent_msg where user_id = '".$_SESSION['id']."' and sms_number = '$nmbr'";
