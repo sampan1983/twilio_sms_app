@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'us-cdbr-east-06.cleardb.net',
-	'username' => 'b506a2881d5453',
-	'password' => '6efc8448',
-	'database' => 'heroku_57de83c19b7e92d',
+	'hostname' => 'q68u8b2buodpme2n.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+	'username' => 'q40safy2jq1aej56',
+	'password' => 'frbhki4aokob1hzv',
+	'database' => 'dz1oduatpy1ct2mo',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
